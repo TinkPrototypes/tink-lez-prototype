@@ -1,8 +1,12 @@
-# Tink prototype skeleton
+# Lez in Tink
 
 v0.0.1
 
 
+
+
+## What is this
+Proof of concept of the lez project based on the Tink prototype skeleton
 
 
 ## How to run the distribution code (for regular users)
