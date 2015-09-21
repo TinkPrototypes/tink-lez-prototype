@@ -133,11 +133,56 @@
                 </div>
               </form>
             </section>
-          </div>
+           </div>
+        </div>
+        <div class="row">
+          <tink-interactive-table tink-checked="boxChecked($data,$checked)" tink-loading="ct.loading" tink-headers="headers" tink-data="data.content" tink-actions="actions" tink-empty-message="het is leeg">
+           <table>
+              <thead>
+                <tr>
+                  <th ng-repeat='view in tinkHeaders'>{{ view.alias }}</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-click="$parent.$parent.load()" ng-repeat='view in tinkData'>
+                  <td>{{ view.firstname | date:'dd/MM/yyyy' }}</td>
+                  <td>{{ view.lastname }}</td>
+                  <td>{{ view.username }}</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <tink-pagination  tink-current-page="$parent.ct.nums" tink-change="$parent.changed(type,value,next)" tink-total-items="$parent.ct.totalitems" tink-items-per-page="$parent.ct.numpp"></tink-pagination>
+          </tink-interactive-table>
         </div>
       </div>
     </div>
   </section>
 </div>
 
+
+<script type="text/javascript">
+      scope.data = [
+      {
+        firstname: 'Jasper',
+        lastname: 'Van Proeyen',
+        username: '@trianglejuice'
+      },
+      {
+        firstname: 'Tom',
+        lastname: 'Wuyts',
+        username: '@pxlpanic'
+      },
+      {
+        firstname: 'Kevin',
+        lastname: 'De Mulder',
+        username: '@clopin'
+      },
+      {
+        firstname: 'Vincent',
+        lastname: 'Bouillart',
+        username: '@BouillartV'
+      }
+    ];
+</script>
 
