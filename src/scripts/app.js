@@ -18,7 +18,9 @@
    'ngSanitize',
    'ngTouch',
    'tink.navigation',
-   'tink.tinkApi'
+   'tink.tinkApi',
+   'tink.timepicker',
+   'tink.datepicker'
    ])
  .config(function ($routeProvider) { /*, $locationProvider */
   $routeProvider
