@@ -2,12 +2,40 @@
   <section>
     <div class="row">
       <div class="col-xs-12">
-        <h1>Alle hotlists</h1>
+        <h1>Alle Hotlists</h1>
         <hr>
       </div>
       <div class="row">
         <div class="col-xs-12">
-          tekst
+          <div class="col-md-2">
+            <label for="select">Toepassingsgebied</label>
+          </div>
+          <div class="col-md-2">
+            <div class="select">
+              <select id="toepassingsgebied">
+                <option value="" disabled selected>Selecteer een optie</option>
+                <option>LEZ</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-1">
+            Datum van
+          </div>
+          <div class="col-md-2">
+            <data-tink-datepicker data-ng-model="selectedDate1"></data-tink-datepicker>
+          </div>
+          <div class="col-md-1">
+            Tot
+          </div>
+          <div class="col-md-2">
+            <data-tink-datepicker data-ng-model="selectedDate2"></data-tink-datepicker>
+          </div>
+          <div class="col-md-2">
+            <button type="submit" class="btn btn-default">Zoeken</button>
+          </div>
         </div>
       </div>
     </div>

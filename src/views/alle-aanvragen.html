@@ -5,11 +5,139 @@
         <h1>Alle aanvragen</h1>
         <hr>
       </div>
-      <div class="row">
-        <div class="col-xs-12">
-          tekst
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <section class="panel card tink-bg-gray-lightest">
+              <form class="panel-body row">
+                <div class="col-xs-12 col-md-6">
+                  <div class="form-group row col-xs-12">
+                    <div class="col-xs-4">
+                     <label for="select">Toepassingsgebied</label>
+                    </div>
+                    <div class="select col-xs-8">
+                      <select id="toepassingsgebied">
+                        <option value="" disabled selected>Selecteer een optie</option>
+                        <option>LEZ</option>
+                        <option>Optie 2</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group row col-xs-12">
+                    <div class="col-xs-4">
+                     <label for="nummerplaat">Nummerplaat</label>
+                    </div>
+                    <div class="col-xs-8">
+                      <input type="text" id="nummerplaat" placeholder="Geef een nummerplaat in">
+                    </div>
+                  </div>
+                  <div class="form-group row col-xs-12">
+                    <div class="col-xs-4">
+                     <label for="aanvraagnr">Aanvraagnr</label>
+                    </div>
+                    <div class="col-xs-8">
+                      <input type="text" id="aanvraagnr" placeholder="Geef een aanvraagnummer in">
+                    </div>
+                  </div>
+                  <div class="form-group row col-xs-12">
+                    <div class="col-xs-4">
+                     <label for="status-aanvraag">Status aanvraag</label>
+                    </div>
+                    <div class="select col-xs-8">
+                      <select id="status-aanvraag">
+                        <option value="" disabled selected>Selecteer een optie</option>
+                        <option>Optie 1</option>
+                        <option>Optie 2</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group row col-xs-12">
+                    <div class="col-xs-4">
+                     <label for="type-aanvraag">Type aanvraag</label>
+                    </div>
+                    <div class="select col-xs-8">
+                      <select id="type-aanvraag">
+                        <option value="" disabled selected>Selecteer een optie</option>
+                        <option>Optie 1</option>
+                        <option>Optie 2</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group row col-xs-12">
+                    <div class="col-xs-4">
+                     <label for="soort-aanvraag">Soort aanvraag</label>
+                    </div>
+                    <div class="select col-xs-8">
+                      <select id="soort-aanvraag">
+                        <option value="" disabled selected>Selecteer een optie</option>
+                        <option>Optie 1</option>
+                        <option>Optie 2</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+
+
+                <div class="col-xs-12 col-md-6">
+                  <div class="form-group row col-xs-12">
+                    <div class="col-xs-3">
+                     Indiening tussen
+                    </div>
+                    <div class="select col-xs-4">
+                      <data-tink-datepicker data-ng-model="selectedDate1"></data-tink-datepicker>
+                    </div>
+                    <div class="col-xs-1">
+                     en
+                    </div>
+                    <div class="select col-xs-4">
+                      <data-tink-datepicker data-ng-model="selectedDate2"></data-tink-datepicker>
+                    </div>
+                  </div>
+                  <div class="form-group row col-xs-12">
+                    <div class="col-xs-3">
+                     Start looptijd tussen
+                    </div>
+                    <div class="select col-xs-4">
+                      <data-tink-datepicker data-ng-model="selectedDate3"></data-tink-datepicker>
+                    </div>
+                    <div class="col-xs-1">
+                     en
+                    </div>
+                    <div class="select col-xs-4">
+                      <data-tink-datepicker data-ng-model="selectedDate4"></data-tink-datepicker>
+                    </div>
+                  </div>
+                  <div class="form-group row col-xs-12">
+                    <div class="col-xs-3">
+                     en tussen
+                    </div>
+                    <div class="select col-xs-4">
+                      <tink-timepicker data-ng-model="selectedTime1"></tink-timepicker>
+                    </div>
+                    <div class="col-xs-1">
+                     en
+                    </div>
+                    <div class="select col-xs-4">
+                      <tink-timepicker data-ng-model="selectedTime2"></tink-timepicker>
+                    </div>
+                  </div>
+
+
+                  <div class="row col-xs-12">
+                    <div class="col-xs-2 col-md-offset-10">
+                      <button type="submit" class="btn btn-default">Zoeken</button>
+                    </div>
+                  </div>
+
+                </div>
+              </form>
+            </section>
+          </div>
         </div>
       </div>
     </div>
   </section>
 </div>
+
+
