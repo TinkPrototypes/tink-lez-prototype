@@ -1,7 +1,7 @@
 {
-  "name": "tink-prototype-skeleton",
-  "description": "Tink prototype skeleton",
-  "version": "0.0.1",
+  "name": "lez-in-tink",
+  "description": "Lez in Tink",
+  "version": "0.1.0",
   "repository": {},
   "dependencies": {},
   "devDependencies": {
