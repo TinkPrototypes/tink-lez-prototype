@@ -16,7 +16,7 @@ angular.module('tinkApp')
         scope.totalitems = 200;
         next();
       },300);
-    }
+    };
 
     scope.totalitems = 200;
     scope.chan = function(prop,or,typ){
@@ -46,7 +46,7 @@ angular.module('tinkApp')
         }
       ];
     },300);
-    }
+    };
 
     timeout(function(){
       // Data model
@@ -97,15 +97,15 @@ angular.module('tinkApp')
     scope.nums=0;
     scope.changenums = function(){
       scope.nums = scope.nums+1;
-    }
-    scope.perpageValue=[10,20,25,30,45]
+    };
+    scope.perpageValue=[10,20,25,30,45];
 
     // Some actions that become available when you check one or multiple rows
    scope.actions = [
       {
         name: 'remove',
         callback: function(items) {
-          angular.forEach(items, function(val) {console.log('ohoho',scope.data.indexOf(val))
+          angular.forEach(items, function(val) {console.log('ohoho',scope.data.indexOf(val));
             scope.data.splice(scope.data.indexOf(val),1);
           });
         }
