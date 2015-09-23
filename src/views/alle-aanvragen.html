@@ -151,9 +151,22 @@
             </thead>
             <tbody>
               <tr ng-click="$parent.$parent.load()" ng-repeat='view in tinkData'>
-                <td>{{ view.firstname | date:'dd/MM/yyyy' }}</td>
-                <td>{{ view.lastname }}</td>
-                <td>{{ view.username }}</td>
+                <td>{{ view.aanvraagnr | date:'dd/MM/yyyy' }}</td>
+                <td>{{ view.nummerplaat }}</td>
+                <td>{{ view.aangevraagdop }}</td>
+                <td>
+                  <div data-ng-switch="view.status">
+                    <span data-ng-switch-when="in behandeling" class="label">{{ view.status }}</span>
+                    <span data-ng-switch-when="ingediend" class="label-warning">{{ view.status }}</span>
+                    <span data-ng-switch-when="opnieuw ingediend" class="label-info">{{ view.status }}</span>
+                    <span data-ng-switch-when="afgekeurd" class="label-danger">{{ view.status }}</span>
+                    <span data-ng-switch-when="goedgekeurd" class="label-success">{{ view.status }}</span>
+                  </div>
+                </td>
+                <td>{{ view.type }}</td>
+                <td>{{ view.soort }}</td>
+                <td>{{ view.looptijdstart }}</td>
+                <td>{{ view.looptijdeinde }}</td>
               </tr>
             </tbody>
           </table>
