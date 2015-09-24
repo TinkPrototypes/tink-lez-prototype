@@ -55,3 +55,18 @@
     }
   }
 }
+
+.absolute-lg {
+  &-container {
+    > div {
+      z-index: 1;
+    }
+  }
+
+  &-element {
+    @include mq($screen-lg) {
+      position: absolute;
+      z-index: 0 !important;
+    }
+  }
+}
