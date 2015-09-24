@@ -1,0 +1,23 @@
+@import "../../bower_components/tink-core/dist/tink/functions";
+@import "../../bower_components/tink-core/dist/tink/mixins";
+@import "../../bower_components/tink-core/dist/tink/variables";
+
+/**
+ * ----------------------------------------------------------------
+ * Site specific styles
+ * ----------------------------------------------------------------
+ */
+
+.form-inline {
+  @include mq($screen-md) {
+    label {
+      margin-top: rem(7);
+    }
+  }
+}
+
+.card {
+  &-body-bg-alt {
+    background-color: #f7f7f7;
+  }
+}

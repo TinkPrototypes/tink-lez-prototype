@@ -7,53 +7,72 @@ angular.module('tinkApp')
     // Override default items per page
     scope.pages = '5, 10, 25';
 
-    //!! scope.changed = function(data,next){
-    //   console.log(data,scope.nums);
+    scope.changed = function(data,next){
+      console.log(data,scope.nums);
 
-    //   timeout(function(){
-    //     // Data model
-    //     scope.data = [
-    //     ];
-    //     scope.totalitems = 200;
-    //     next();
-    //   },300);
-    // };
+      timeout(function(){
+        // Data model
+        scope.data = [
+        ];
+        scope.totalitems = 200;
+        next();
+      },300);
+    };
     scope.changed = function(type,value,fn){
       fn();
     };
 
-    //!! scope.totalitems = 200;
-    // scope.chan = function(prop,or,typ){
-    //   console.log('changed',prop,or,typ);
-    //   timeout(function(){
-    //   // Data model
-    //   scope.data = [
-    //     {
-    //       firstname: 'Jasper',
-    //       lastname: 'Van Proeyen',
-    //       username: '@trianglejuice'
-    //     },
-    //     {
-    //       firstname: 'Tom',
-    //       lastname: 'Wuyts',
-    //       username: '@pxlpanic'
-    //     },
-    //     {
-    //       firstname: 'Kevin',
-    //       lastname: 'De Mulder',
-    //       username: '@clopin'
-    //     },
-    //     {
-    //       firstname: 'Vincent',
-    //       lastname: 'Bouillart',
-    //       username: '@BouillartV'
-    //     }
-    //   ];
-    // },300);
-    // };
-
-    //!! timeout(function(){
+    scope.totalitems = 200;
+    scope.chan = function(prop,or,typ){
+      console.log('changed',prop,or,typ);
+      timeout(function(){
       // Data model
+      scope.data = [
+        {
+          aanvraagnr: '2015.34034',
+          nummerplaat: '1 - AAA - 123',
+          aangevraagdop: '15/02/2015',
+          status: 'in behandeling',
+          type: 'Vrijstelling',
+          soort: 'Soort 1',
+          looptijdstart: '15/02/2015',
+          looptijdeinde: '10/03/2015',
+        },
+        {
+          aanvraagnr: '2015.94893',
+          nummerplaat: '1 - OAJ - 123',
+          aangevraagdop: '23/09/2015',
+          status: 'in behandeling',
+          type: 'Vrijstelling',
+          soort: 'Oldtimer',
+          looptijdstart: '23/09/2015',
+          looptijdeinde: '25/09/2015',
+        },
+        {
+          aanvraagnr: '2015.19847',
+          nummerplaat: '1 - TXA - 123',
+          aangevraagdop: '12/06/2015',
+          status: 'in behandeling',
+          type: 'Vrijstelling',
+          soort: 'Soort 1',
+          looptijdstart: '12/06/2015',
+          looptijdeinde: '12/06/2015',
+        },
+        {
+          aanvraagnr: '2015.40392',
+          nummerplaat: '1 - DDD - 123',
+          aangevraagdop: '11/02/2015',
+          status: 'in behandeling',
+          type: 'Vrijstelling',
+          soort: 'Soort 1',
+          looptijdstart: '15/02/2015',
+          looptijdeinde: '10/03/2015',
+        }
+      ];
+    },300);
+    };
+
+    timeout(function(){
     // Data model
       scope.data.content = [
         {
@@ -177,7 +196,7 @@ angular.module('tinkApp')
           looptijdeinde: '13/03/2015',
         },
       ];
-    //!! },700);
+    },700);
 
     // The headers you want to show and whether they are already visible in the table
     scope.headers = [
@@ -190,38 +209,44 @@ angular.module('tinkApp')
       {
         field: 'nummerplaat',
         alias: 'Nummerplaat',
-        checked: false,
+        checked: true,
         sort:true
       },
       {
         field: 'aangevraagdop',
-        alias: 'Aangevraagdop',
-        checked: true
+        alias: 'Aangevraagd op',
+        checked: true,
+        sort:true
       },
       {
         field: 'status',
         alias: 'Status',
-        checked: true
+        checked: true,
+        sort:true
       },
       {
         field: 'type',
         alias: 'Type',
-        checked: true
+        checked: true,
+        sort:true
       },
       {
         field: 'soort',
         alias: 'Soort',
-        checked: true
+        checked: true,
+        sort:true
       },
       {
         field: 'looptijdstart',
         alias: 'Looptijd start',
-        checked: true
+        checked: true,
+        sort:true
       },
       {
         field: 'looptijdeinde',
         alias: 'Looptijd einde',
-        checked: true
+        checked: true,
+        sort:true
       }
     ];
     scope.nums=0;
@@ -230,17 +255,6 @@ angular.module('tinkApp')
     };
     scope.perpageValue=[10,20,25,30,45];
 
-    // Some actions that become available when you check one or multiple rows
-   //!! scope.actions = [
-   //    {
-   //      name: 'remove',
-   //      callback: function(items) {
-   //        angular.forEach(items, function(val) {console.log('ohoho',scope.data.indexOf(val));
-   //          scope.data.splice(scope.data.indexOf(val),1);
-   //        });
-   //      }
-   //    }
-   //  ];
 
       scope.actions = [
       {
