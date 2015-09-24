@@ -7,47 +7,32 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
-          <section class="panel card-body-bg-alt">
-            <form class="panel-body form-inline">
-              <div class="row">
-                <div class="col-xs-12 col-lg-5">
-                  <div class="row">
-                    <div class="col-xs-12 col-lg-5">
-                      <label for="input-text">Vanaf nummerplaat</label>
-                    </div>
-                    <div class="col-xs-12 col-lg-7">
-                      <input type="text" id="input-text" placeholder="geef een nummerplaat in">
+          <section>
+            <form class="bar bar-search">
+              <ul class="bar-left">
+                <li>
+                  <div class="form-group">
+                    <label for="nummerplaat">Vanaf nummerplaat</label>
+                    <input type="text" id="nummerplaat" placeholder="Geef een nummerplaat in">
+                  </div>
+                </li>
+                <li>
+                  <div class="form-group">
+                    <label>Toon</label>
+                    <div class="checkbox">
+                      <input type="checkbox" id="aangepast" name="aangepast" value="" checked="">
+                      <label for="aangepast">Manueel aangepaste records</label>
                     </div>
                   </div>
-                </div>
-                <div class="col-xs-12 col-lg-3">
-                  <div class="row">
-                    <div class="col-xs-12 col-lg-4">
-                      <label>Toon</label>
-                    </div>
-                    <div class="col-xs-12 col-lg-8">
-                      <data-tink-datepicker data-ng-model="selectedDate1"></data-tink-datepicker>
-                    </div>
+                </li>
+              </ul>
+              <ul class="bar-right">
+                <li>
+                  <div class="form-group">
+                    <button type="submit" class="btn btn-default pull-right"><i class="fa fa-fw fa-search"></i> Zoeken</button>
                   </div>
-                </div>
-                <div class="col-xs-12 col-lg-3">
-                  <div class="row">
-                    <div class="col-xs-12 col-lg-2">
-                      <label>Tot</label>
-                    </div>
-                    <div class="col-xs-12 col-lg-8">
-                      <data-tink-datepicker data-ng-model="selectedDate2"></data-tink-datepicker>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xs-12 col-lg-1">
-                  <div class="row">
-                    <div class="col-xs-12">
-                      <button type="submit" class="btn btn-default pull-right">Zoeken</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                </li>
+              </ul>
             </form>
           </section>
         </div>
