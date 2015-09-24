@@ -44,5 +44,10 @@
   "homepage": "http://tink.digipolis.be",
   "keywords": [
     "tink"
-  ]
+  ],
+  "overrides": {
+    "tink-core": {
+      "main": []
+    }
+  }
 }
