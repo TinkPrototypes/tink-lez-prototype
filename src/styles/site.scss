@@ -8,16 +8,44 @@
  * ----------------------------------------------------------------
  */
 
-.form-inline {
-  @include mq($screen-md) {
-    label {
-      margin-top: rem(7);
-    }
-  }
+.form-group {
+  margin-bottom: rem(9);
 }
 
-.card {
-  &-body-bg-alt {
-    background-color: #f7f7f7;
+.card-body-bg-alt {
+  background-color: #f7f7f7;
+}
+
+.form-inline {
+  position: relative;
+
+  label {
+    display: block;
+    margin-top: 1px;
+    padding-top: rem(6);
+
+    @include mq($screen-sm) {
+      overflow: hidden;
+      text-align: right;
+      text-overflow: ellipsis;
+    }
+
+    &.label-center {
+      text-align: center;
+    }
+  }
+
+  &-search {
+    @include mq($screen-lg) {
+      bottom: rem(16);
+      position: absolute;
+      right: rem(16);
+    }
+  }
+
+  .datepicker-input-fields {
+    .faux-input {
+      min-width: 0;
+    }
   }
 }

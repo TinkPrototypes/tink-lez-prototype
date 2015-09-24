@@ -1,182 +1,207 @@
 <div class="container">
-  <section>
-    <div class="row">
-      <div class="col-xs-12">
-        <h1>Alle aanvragen</h1>
-        <hr>
+  <h1 class="h3">Alle aanvragen</h1>
+  <hr>
+  <div class="row">
+    <section class="col-xs-12">
+      <div class="card card-body-bg-alt">
+        <form class="card-body form-inline">
+          <div class="row">
+
+            <!-- Left -->
+            <div class="col-xs-12 col-lg-6">
+
+              <div class="row form-group">
+                <div class="col-xs-12 col-sm-4">
+                  <label for="toepassingsgebied">Toepassingsgebied</label>
+                </div>
+                <div class="col-xs-12 col-sm-8">
+                  <div class="select">
+                    <select id="toepassingsgebied">
+                      <option selected="selected">Alle</option>
+                      <option>LEZ</option>
+                      <option>Optie 2</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row form-group">
+                <div class="col-xs-12 col-sm-4">
+                  <label for="nummerplaat">Nummerplaat</label>
+                </div>
+                <div class="col-xs-12 col-sm-8">
+                  <input type="text" id="nummerplaat" placeholder="Geef een nummerplaat in">
+                </div>
+              </div>
+
+              <div class="row form-group">
+                <div class="col-xs-12 col-sm-4">
+                  <label for="aanvraagnr">Aanvraagnr.</label>
+                </div>
+                <div class="col-xs-12 col-sm-8">
+                  <input type="text" id="aanvraagnr" placeholder="Geef een aanvraagnummer in">
+                </div>
+              </div>
+
+              <div class="row form-group">
+                <div class="col-xs-12 col-sm-4">
+                  <label for="status-aanvraag">Status aanvraag</label>
+                </div>
+                <div class="col-xs-12 col-sm-8">
+                  <div class="select">
+                    <select id="status-aanvraag">
+                      <option selected="selected">Alle</option>
+                      <option>Optie 1</option>
+                      <option>Optie 2</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row form-group">
+                <div class="col-xs-12 col-sm-4">
+                  <label for="type-aanvraag">Type aanvraag</label>
+                </div>
+                <div class="col-xs-12 col-sm-8">
+                  <div class="select">
+                    <select id="type-aanvraag">
+                      <option selected="selected">Alle</option>
+                      <option>Optie 1</option>
+                      <option>Optie 2</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row form-group">
+                <div class="col-xs-12 col-sm-4">
+                  <label for="soort-aanvraag">Soort aanvraag</label>
+                </div>
+                <div class="col-xs-12 col-sm-8">
+                  <div class="select">
+                    <select id="soort-aanvraag">
+                      <option selected="selected">Alle</option>
+                      <option>Optie 1</option>
+                      <option>Optie 2</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Right -->
+            <div class="col-xs-12 col-lg-6">
+
+              <div class="row form-group">
+                <div class="col-xs-12 col-sm-4">
+                  <label for="selectedDate1">Indiening tussen</label>
+                </div>
+                <div class="col-xs-12 col-sm-8">
+                  <div class="row">
+                    <div class="col-xs-5 col-lg-6">
+                      <data-tink-datepicker id="selectedDate1" data-ng-model="selectedDate1"></data-tink-datepicker>
+                    </div>
+                    <div class="col-xs-2 hidden-lg">
+                      <label for="selectedDate2" class="label-center">en</label>
+                    </div>
+                    <div class="col-xs-5 col-lg-6">
+                      <data-tink-datepicker id="selectedDate2" data-ng-model="selectedDate2"></data-tink-datepicker>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row form-group">
+                <div class="col-xs-12 col-sm-4">
+                  <label for="selectedDate3">Start looptijd tussen</label>
+                </div>
+                <div class="col-xs-12 col-sm-8">
+                  <div class="row">
+                    <div class="col-xs-5 col-lg-6">
+                      <data-tink-datepicker id="selectedDate3" data-ng-model="selectedDate3"></data-tink-datepicker>
+                    </div>
+                    <div class="col-xs-2 hidden-lg">
+                      <label for="selectedDate4" class="label-center">en</label>
+                    </div>
+                    <div class="col-xs-5 col-lg-6">
+                      <data-tink-datepicker id="selectedDate4" data-ng-model="selectedDate4"></data-tink-datepicker>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row form-group">
+                <div class="col-xs-12 col-sm-4">
+                  <label for="selectedTime1">en tussen</label>
+                </div>
+                <div class="col-xs-12 col-sm-8">
+                  <div class="row">
+                    <div class="col-xs-5 col-lg-6">
+                      <tink-timepicker id="selectedTime1" data-ng-model="selectedTime1"></tink-timepicker>
+                    </div>
+                    <div class="col-xs-2 hidden-lg">
+                      <label for="selectedTime2" class="label-center">en</label>
+                    </div>
+                    <div class="col-xs-5 col-lg-6">
+                      <tink-timepicker id="selectedTime2" data-ng-model="selectedTime2"></tink-timepicker>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="row form-group form-inline-search">
+            <div class="col-xs-12 margin-top">
+              <button type="submit" class="btn btn-default pull-right"><i class="fa fa-fw fa-search"></i> Zoeken</button>
+            </div>
+          </div>
+        </form>
       </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-            <section class="panel card-body-bg-alt">
-              <form class="panel-body row">
-                <div class="col-xs-12 col-lg-6">
-                  <div class="form-group row col-xs-12">
-                    <div class="col-xs-4">
-                     <label for="select">Toepassingsgebied</label>
-                    </div>
-                    <div class="select col-xs-8">
-                      <select id="toepassingsgebied">
-                        <option>Selecteer een optie</option>
-                        <option>LEZ</option>
-                        <option>Optie 2</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="form-group row col-xs-12">
-                    <div class="col-xs-4">
-                     <label for="nummerplaat">Nummerplaat</label>
-                    </div>
-                    <div class="col-xs-8">
-                      <input type="text" id="nummerplaat" placeholder="Geef een nummerplaat in">
-                    </div>
-                  </div>
-                  <div class="form-group row col-xs-12">
-                    <div class="col-xs-4">
-                     <label for="aanvraagnr">Aanvraagnr</label>
-                    </div>
-                    <div class="col-xs-8">
-                      <input type="text" id="aanvraagnr" placeholder="Geef een aanvraagnummer in">
-                    </div>
-                  </div>
-                  <div class="form-group row col-xs-12">
-                    <div class="col-xs-4">
-                     <label for="status-aanvraag">Status aanvraag</label>
-                    </div>
-                    <div class="select col-xs-8">
-                      <select id="status-aanvraag">
-                        <option value="">Selecteer een optie</option>
-                        <option>Optie 1</option>
-                        <option>Optie 2</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="form-group row col-xs-12">
-                    <div class="col-xs-4">
-                     <label for="type-aanvraag">Type aanvraag</label>
-                    </div>
-                    <div class="select col-xs-8">
-                      <select id="type-aanvraag">
-                        <option>Selecteer een optie</option>
-                        <option>Optie 1</option>
-                        <option>Optie 2</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="form-group row col-xs-12">
-                    <div class="col-xs-4">
-                     <label for="soort-aanvraag">Soort aanvraag</label>
-                    </div>
-                    <div class="select col-xs-8">
-                      <select id="soort-aanvraag">
-                        <option>Selecteer een optie</option>
-                        <option>Optie 1</option>
-                        <option>Optie 2</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
+    </section>
 
 
 
-                <div class="col-xs-12 col-lg-6">
-                  <div class="form-group row col-xs-12">
-                    <div class="col-xs-3">
-                     Indiening tussen
-                    </div>
-                    <div class="select col-xs-4">
-                      <data-tink-datepicker data-ng-model="selectedDate1"></data-tink-datepicker>
-                    </div>
-                    <div class="text-center col-xs-1">
-                     en
-                    </div>
-                    <div class="select col-xs-4">
-                      <data-tink-datepicker data-ng-model="selectedDate2"></data-tink-datepicker>
-                    </div>
-                  </div>
-                  <div class="form-group row col-xs-12">
-                    <div class="col-xs-3">
-                     Start looptijd tussen
-                    </div>
-                    <div class="select col-xs-4">
-                      <data-tink-datepicker data-ng-model="selectedDate3"></data-tink-datepicker>
-                    </div>
-                    <div class="text-center col-xs-1">
-                     en
-                    </div>
-                    <div class="select col-xs-4">
-                      <data-tink-datepicker data-ng-model="selectedDate4"></data-tink-datepicker>
-                    </div>
-                  </div>
-                  <div class="form-group row col-xs-12">
-                    <div class="col-xs-3">
-                     en tussen
-                    </div>
-                    <div class="select col-xs-4">
-                      <tink-timepicker data-ng-model="selectedTime1"></tink-timepicker>
-                    </div>
-                    <div class="text-center col-xs-1">
-                     en
-                    </div>
-                    <div class="select col-xs-4">
-                      <tink-timepicker data-ng-model="selectedTime2"></tink-timepicker>
-                    </div>
-                  </div>
+    <section class="col-xs-12 margin-top" data-ng-controller="tableCtrl">
+      <div class="row">
+        <div class="col-xs-12">
+          <tink-interactive-table data-tink-checked="boxChecked($data,$checked)" data-tink-loading="ct.loading" data-tink-headers="headers" data-tink-data="data.content" data-tink-actions="actions" data-tink-empty-message="geen data beschikbaar">
 
-
-                  <div class="row col-xs-12">
-                    <div class="col-xs-12">
-                      <button type="submit" class="btn btn-default pull-right">Zoeken</button>
+           <table id="aanvragen-overzicht">
+              <thead>
+                <tr>
+                  <th ng-repeat='view in tinkHeaders'>{{ view.alias }}</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-click="$parent.$parent.load()" ng-repeat='view in tinkData'>
+                  <td>{{ view.aanvraagnr | date:'dd/MM/yyyy' }}</td>
+                  <td>{{ view.nummerplaat }}</td>
+                  <td>{{ view.aangevraagdop }}</td>
+                  <td>
+                    <div data-ng-switch="view.status">
+                      <span data-ng-switch-when="in behandeling" class="label">{{ view.status }}</span>
+                      <span data-ng-switch-when="ingediend" class="label-warning">{{ view.status }}</span>
+                      <span data-ng-switch-when="opnieuw ingediend" class="label-info">{{ view.status }}</span>
+                      <span data-ng-switch-when="afgekeurd" class="label-danger">{{ view.status }}</span>
+                      <span data-ng-switch-when="goedgekeurd" class="label-success">{{ view.status }}</span>
                     </div>
-                  </div>
+                  </td>
+                  <td>{{ view.type }}</td>
+                  <td>{{ view.soort }}</td>
+                  <td>{{ view.looptijdstart }}</td>
+                  <td>{{ view.looptijdeinde }}</td>
+                </tr>
+              </tbody>
+            </table>
 
-                </div>
-              </form>
-            </section>
-           </div>
+            <tink-pagination data-tink-pagination-id="aanvragen-overzicht" data-tink-current-page="0" data-tink-total-items="15" data-tink-items-per-page="5" data-tink-items-per-page-values="5" data-tink-change="$parent.changed(type,value,next)" ></tink-pagination>
+
+          </tink-interactive-table>
         </div>
       </div>
-    </div>
-  </section>
-  <section data-ng-controller="tableCtrl">
-    <div class="row">
-      <div class="col-xs-12">
-        <tink-interactive-table data-tink-checked="boxChecked($data,$checked)" data-tink-loading="ct.loading" data-tink-headers="headers" data-tink-data="data.content" data-tink-actions="actions" data-tink-empty-message="geen data beschikbaar">
-
-         <table id="aanvragen-overzicht">
-            <thead>
-              <tr>
-                <th ng-repeat='view in tinkHeaders'>{{ view.alias }}</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr ng-click="$parent.$parent.load()" ng-repeat='view in tinkData'>
-                <td>{{ view.aanvraagnr | date:'dd/MM/yyyy' }}</td>
-                <td>{{ view.nummerplaat }}</td>
-                <td>{{ view.aangevraagdop }}</td>
-                <td>
-                  <div data-ng-switch="view.status">
-                    <span data-ng-switch-when="in behandeling" class="label">{{ view.status }}</span>
-                    <span data-ng-switch-when="ingediend" class="label-warning">{{ view.status }}</span>
-                    <span data-ng-switch-when="opnieuw ingediend" class="label-info">{{ view.status }}</span>
-                    <span data-ng-switch-when="afgekeurd" class="label-danger">{{ view.status }}</span>
-                    <span data-ng-switch-when="goedgekeurd" class="label-success">{{ view.status }}</span>
-                  </div>
-                </td>
-                <td>{{ view.type }}</td>
-                <td>{{ view.soort }}</td>
-                <td>{{ view.looptijdstart }}</td>
-                <td>{{ view.looptijdeinde }}</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <tink-pagination data-tink-pagination-id="aanvragen-overzicht" data-tink-current-page="0" data-tink-total-items="15" data-tink-items-per-page="5" data-tink-items-per-page-values="5" data-tink-change="$parent.changed(type,value,next)" ></tink-pagination>
-
-        </tink-interactive-table>
-      </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </div>
-
-
