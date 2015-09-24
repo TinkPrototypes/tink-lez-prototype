@@ -38,6 +38,9 @@
   .when('/alle-hotlists', {
     templateUrl: 'views/alle-hotlists.html',
   })
+  .when('/detail-hotlists', {
+    templateUrl: 'views/detail-hotlists.html',
+  })
   .when('/uitgevoerde-programmas', {
     templateUrl: 'views/uitgevoerde-programmas.html',
   })
