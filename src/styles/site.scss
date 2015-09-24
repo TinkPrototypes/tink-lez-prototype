@@ -19,11 +19,12 @@ $gray-lightest: $body-bg-alt;
 }
 
 .form-inline {
+  padding-bottom: rem(7);
   position: relative;
 
   &-search {
     @include mq($screen-lg) {
-      bottom: rem(16);
+      bottom: rem(7);
       position: absolute;
       right: rem(16);
     }
@@ -36,7 +37,8 @@ $gray-lightest: $body-bg-alt;
   }
 
   .checkbox {
-    margin-top: rem(5);
+    display: inline-block;
+    // margin-top: rem(5);
   }
 }
 
@@ -55,10 +57,6 @@ label {
     &.label-center {
       text-align: center;
     }
-  }
-
-  &.label-inline {
-    // display: inline-block;
   }
 }
 
