@@ -1,81 +1,91 @@
 <div class="container">
+  <h1 class="h3">Detailgegevens hotlists</h1>
+  <hr>
   <div class="row">
-    <div class="col-xs-12">
-      <h1 class="h3">Detailgegevens hotlists</h1>
-      <hr>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12">
-          <section>
-            <form class="bar bar-search">
-              <ul class="bar-left">
-                <li>
-                  <div class="form-group">
-                    <label for="nummerplaat">Vanaf nummerplaat</label>
-                    <input type="text" id="nummerplaat" placeholder="Geef een nummerplaat in">
-                  </div>
-                </li>
-                <li>
-                  <div class="form-group">
-                    <label>Toon</label>
-                    <div class="checkbox">
-                      <input type="checkbox" id="aangepast" name="aangepast" value="" checked="">
-                      <label for="aangepast">Manueel aangepaste records</label>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-              <ul class="bar-right">
-                <li>
-                  <div class="form-group">
-                    <button type="submit" class="btn btn-default pull-right"><i class="fa fa-fw fa-search"></i> Zoeken</button>
-                  </div>
-                </li>
-              </ul>
-            </form>
-          </section>
-        </div>
+    <section class="col-xs-12">
+      <div class="card card-body-bg-alt">
+        <form class="card-body form-inline">
+          <div class="bar">
+            <ul class="bar-left">
+              <li>
+                <label for="nummerplaat" class="label-inline">Vanaf nummerplaat</label>
+                <input type="text" id="nummerplaat" placeholder="Geef een nummerplaat in" class="width-auto">
+              </li>
+              <li>
+                <label for="aangepast" class="label-inline">Toon:</label>
+                <div class="checkbox">
+                  <input type="checkbox" id="aangepast" name="aangepast" value="" checked="">
+                  <label for="aangepast">Manueel aangepaste records</label>
+                </div>
+              </li>
+            </ul>
+            <ul class="bar-right">
+              <li><button type="submit"><i class="fa fa-fw fa-search"></i> Zoeken</button></li>
+            </ul>
+          </div>
+        </form>
       </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12">
-          <section data-ng-controller="tableDetailHotlistsCtrl">
-            <div class="row">
-              <div class="col-xs-12">
-                <tink-interactive-table data-tink-checked="boxChecked($data,$checked)" data-tink-loading="ct.loading" data-tink-headers="headers" data-tink-data="data.content" data-tink-actions="actions" data-tink-empty-message="geen data beschikbaar">
 
-                 <table id="detail-hotlists-overzicht">
-                    <thead>
-                      <tr>
-                        <th ng-repeat='view in tinkHeaders'>{{ view.alias }}</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr ng-click="$parent.$parent.load()" ng-repeat='view in tinkData'>
-                        <td>{{ view.nummerplaat }}</td>
-                        <td>{{ view.land }}</td>
-                        <td>
-                          <div data-ng-switch="view.actief">
-                            <span data-ng-switch-when="true"><i class="fa fa-check"></i></span>
-                          </div>
-                        </td>
-                        <td>{{ view.gewijzigdop }}</td>
-                        <td>{{ view.gewijzigddoor }}</td>
-                        <td>{{ view.reden }}</td>
-                      </tr>
-                    </tbody>
-                  </table>
-
-                  <tink-pagination data-tink-pagination-id="detail-hotlists-overzicht" data-tink-current-page="0" data-tink-total-items="15" data-tink-items-per-page="5" data-tink-items-per-page-values="5" data-tink-change="$parent.changed(type,value,next)" ></tink-pagination>
-
-                </tink-interactive-table>
+      <!-- <form class="bar bar-search">
+        <ul class="bar-left">
+          <li>
+            <div class="form-group">
+              <label for="nummerplaat">Vanaf nummerplaat</label>
+              <input type="text" id="nummerplaat" placeholder="Geef een nummerplaat in">
+            </div>
+          </li>
+          <li>
+            <div class="form-group">
+              <label>Toon</label>
+              <div class="checkbox">
+                <input type="checkbox" id="aangepast" name="aangepast" value="" checked="">
+                <label for="aangepast">Manueel aangepaste records</label>
               </div>
             </div>
-          </section>
+          </li>
+        </ul>
+        <ul class="bar-right">
+          <li>
+            <div class="form-group">
+              <button type="submit" class="btn btn-default pull-right"><i class="fa fa-fw fa-search"></i> Zoeken</button>
+            </div>
+          </li>
+        </ul>
+      </form> -->
+    </section>
+
+    <section class="col-xs-12" data-ng-controller="tableDetailHotlistsCtrl">
+      <div class="row">
+        <div class="col-xs-12">
+          <tink-interactive-table data-tink-checked="boxChecked($data,$checked)" data-tink-loading="ct.loading" data-tink-headers="headers" data-tink-data="data.content" data-tink-actions="actions" data-tink-empty-message="geen data beschikbaar">
+
+           <table id="detail-hotlists-overzicht">
+              <thead>
+                <tr>
+                  <th ng-repeat='view in tinkHeaders'>{{ view.alias }}</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-click="$parent.$parent.load()" ng-repeat='view in tinkData'>
+                  <td>{{ view.nummerplaat }}</td>
+                  <td>{{ view.land }}</td>
+                  <td>
+                    <div data-ng-switch="view.actief">
+                      <span data-ng-switch-when="true"><i class="fa fa-check"></i></span>
+                    </div>
+                  </td>
+                  <td>{{ view.gewijzigdop }}</td>
+                  <td>{{ view.gewijzigddoor }}</td>
+                  <td>{{ view.reden }}</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <tink-pagination data-tink-pagination-id="detail-hotlists-overzicht" data-tink-current-page="0" data-tink-total-items="15" data-tink-items-per-page="5" data-tink-items-per-page-values="5" data-tink-change="$parent.changed(type,value,next)" ></tink-pagination>
+
+          </tink-interactive-table>
         </div>
       </div>
-    </div>
+    </section>
   </div>
 </div>

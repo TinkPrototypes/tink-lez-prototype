@@ -18,12 +18,6 @@ $gray-lightest: $body-bg-alt;
   background-color: $gray-lightest;
 }
 
-.bar-search {
-  background-color: $gray-lightest;
-  border: solid 1px #bbb;
-  border-radius: 3px;
-}
-
 .form-inline {
   position: relative;
 
@@ -46,19 +40,25 @@ $gray-lightest: $body-bg-alt;
   }
 }
 
-label.label-inline {
-  display: block;
-  margin-top: 1px;
-  padding-top: rem(6);
+label {
+  &.label-block {
+    display: block;
+    margin-top: 1px;
+    padding-top: rem(6);
 
-  @include mq($screen-sm) {
-    overflow: hidden;
-    text-align: right;
-    text-overflow: ellipsis;
+    @include mq($screen-sm) {
+      overflow: hidden;
+      text-align: right;
+      text-overflow: ellipsis;
+    }
+
+    &.label-center {
+      text-align: center;
+    }
   }
 
-  &.label-center {
-    text-align: center;
+  &.label-inline {
+    // display: inline-block;
   }
 }
 
@@ -75,4 +75,8 @@ label.label-inline {
       z-index: 0 !important;
     }
   }
+}
+
+.width-auto {
+  width: auto !important;
 }
