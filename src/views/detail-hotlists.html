@@ -1,0 +1,96 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h2>Detailgegevens hotlists</h2>
+      <hr>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <section class="panel card-body-bg-alt">
+            <form class="panel-body form-inline">
+              <div class="row">
+                <div class="col-xs-12 col-lg-5">
+                  <div class="row">
+                    <div class="col-xs-12 col-lg-5">
+                      <label for="input-text">Vanaf nummerplaat</label>
+                    </div>
+                    <div class="col-xs-12 col-lg-7">
+                      <input type="text" id="input-text" placeholder="geef een nummerplaat in">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-lg-3">
+                  <div class="row">
+                    <div class="col-xs-12 col-lg-4">
+                      <label>Toon</label>
+                    </div>
+                    <div class="col-xs-12 col-lg-8">
+                      <data-tink-datepicker data-ng-model="selectedDate1"></data-tink-datepicker>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-lg-3">
+                  <div class="row">
+                    <div class="col-xs-12 col-lg-2">
+                      <label>Tot</label>
+                    </div>
+                    <div class="col-xs-12 col-lg-8">
+                      <data-tink-datepicker data-ng-model="selectedDate2"></data-tink-datepicker>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-lg-1">
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <button type="submit" class="btn btn-default pull-right">Zoeken</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <section data-ng-controller="tableDetailHotlistsCtrl">
+            <div class="row">
+              <div class="col-xs-12">
+                <tink-interactive-table data-tink-checked="boxChecked($data,$checked)" data-tink-loading="ct.loading" data-tink-headers="headers" data-tink-data="data.content" data-tink-actions="actions" data-tink-empty-message="geen data beschikbaar">
+
+                 <table id="detail-hotlists-overzicht">
+                    <thead>
+                      <tr>
+                        <th ng-repeat='view in tinkHeaders'>{{ view.alias }}</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr ng-click="$parent.$parent.load()" ng-repeat='view in tinkData'>
+                        <td>{{ view.nummerplaat }}</td>
+                        <td>{{ view.land }}</td>
+                        <td>
+                          <div data-ng-switch="view.actief">
+                            <span data-ng-switch-when="true"><i class="fa fa-check"></i></span>
+                          </div>
+                        </td>
+                        <td>{{ view.gewijzigdop }}</td>
+                        <td>{{ view.gewijzigddoor }}</td>
+                        <td>{{ view.reden }}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <tink-pagination data-tink-pagination-id="detail-hotlists-overzicht" data-tink-current-page="0" data-tink-total-items="15" data-tink-items-per-page="5" data-tink-items-per-page-values="5" data-tink-change="$parent.changed(type,value,next)" ></tink-pagination>
+
+                </tink-interactive-table>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
