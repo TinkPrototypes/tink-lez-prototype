@@ -12,7 +12,7 @@
 
               <div class="row form-group">
                 <div class="col-xs-12 col-sm-4">
-                  <label for="toepassingsgebied">Toepassingsgebied</label>
+                  <label for="toepassingsgebied" class="label-inline">Toepassingsgebied</label>
                 </div>
                 <div class="col-xs-12 col-sm-8">
                   <div class="select">
@@ -27,7 +27,7 @@
 
               <div class="row form-group">
                 <div class="col-xs-12 col-sm-4">
-                  <label for="nummerplaat">Nummerplaat</label>
+                  <label for="nummerplaat" class="label-inline">Nummerplaat</label>
                 </div>
                 <div class="col-xs-12 col-sm-8">
                   <input type="text" id="nummerplaat" placeholder="Geef een nummerplaat in">
@@ -36,16 +36,16 @@
 
               <div class="row form-group">
                 <div class="col-xs-12 col-sm-4">
-                  <label for="aanvraagnr">Aanvraagnr.</label>
+                  <label for="aanvraagnr" class="label-inline">Aanvraagnr.</label>
                 </div>
                 <div class="col-xs-12 col-sm-8">
-                  <input type="text" id="aanvraagnr" placeholder="Geef een aanvraagnummer in">
+                  <input type="number" id="aanvraagnr" placeholder="Geef een aanvraagnummer in">
                 </div>
               </div>
 
               <div class="row form-group">
                 <div class="col-xs-12 col-sm-4">
-                  <label for="status-aanvraag">Status aanvraag</label>
+                  <label for="status-aanvraag" class="label-inline">Status aanvraag</label>
                 </div>
                 <div class="col-xs-12 col-sm-8">
                   <div class="select">
@@ -60,7 +60,7 @@
 
               <div class="row form-group">
                 <div class="col-xs-12 col-sm-4">
-                  <label for="type-aanvraag">Type aanvraag</label>
+                  <label for="type-aanvraag" class="label-inline">Type aanvraag</label>
                 </div>
                 <div class="col-xs-12 col-sm-8">
                   <div class="select">
@@ -75,9 +75,13 @@
 
               <div class="row form-group">
                 <div class="col-xs-12 col-sm-4">
-                  <label for="soort-aanvraag">Soort aanvraag</label>
+                  <label for="soort-aanvraag" class="label-inline">Soort aanvraag</label>
                 </div>
                 <div class="col-xs-12 col-sm-8">
+                  <!-- <div class="checkbox">
+                    <input type="checkbox" id="soort-aanvraag" checked>
+                    <label for="soort-aanvraag">Actief</label>
+                  </div> -->
                   <div class="select">
                     <select id="soort-aanvraag">
                       <option selected="selected">Alle</option>
@@ -95,7 +99,7 @@
 
               <div class="row form-group">
                 <div class="col-xs-12 col-sm-4">
-                  <label for="selectedDate1">Indiening tussen</label>
+                  <label for="selectedDate1" class="label-inline">Indiening tussen</label>
                 </div>
                 <div class="col-xs-12 col-sm-8">
                   <div class="row absolute-lg-container">
@@ -103,7 +107,7 @@
                       <data-tink-datepicker id="selectedDate1" data-ng-model="selectedDate1"></data-tink-datepicker>
                     </div>
                     <div class="col-xs-2 col-lg-12 absolute-lg-element">
-                      <label for="selectedDate2" class="label-center">en</label>
+                      <label for="selectedDate2" class="label-inline label-center">en</label>
                     </div>
                     <div class="col-xs-5 col-lg-6">
                       <data-tink-datepicker id="selectedDate2" data-ng-model="selectedDate2"></data-tink-datepicker>
@@ -114,7 +118,7 @@
 
               <div class="row form-group">
                 <div class="col-xs-12 col-sm-4">
-                  <label for="selectedDate3">Start looptijd tussen</label>
+                  <label for="selectedDate3" class="label-inline">Start looptijd tussen</label>
                 </div>
                 <div class="col-xs-12 col-sm-8">
                   <div class="row absolute-lg-container">
@@ -122,7 +126,7 @@
                       <data-tink-datepicker id="selectedDate3" data-ng-model="selectedDate3"></data-tink-datepicker>
                     </div>
                     <div class="col-xs-2 col-lg-12 absolute-lg-element">
-                      <label for="selectedDate4" class="label-center">en</label>
+                      <label for="selectedDate4" class="label-inline label-center">en</label>
                     </div>
                     <div class="col-xs-5 col-lg-6">
                       <data-tink-datepicker id="selectedDate4" data-ng-model="selectedDate4"></data-tink-datepicker>
@@ -133,7 +137,7 @@
 
               <div class="row form-group">
                 <div class="col-xs-12 col-sm-4">
-                  <label for="selectedTime1">en tussen</label>
+                  <label for="selectedTime1" class="label-inline">en tussen</label>
                 </div>
                 <div class="col-xs-12 col-sm-8">
                   <div class="row absolute-lg-container">
@@ -141,7 +145,7 @@
                       <tink-timepicker id="selectedTime1" data-ng-model="selectedTime1"></tink-timepicker>
                     </div>
                     <div class="col-xs-2 col-lg-12 absolute-lg-element">
-                      <label for="selectedTime2" class="label-center">en</label>
+                      <label for="selectedTime2" class="label-inline label-center">en</label>
                     </div>
                     <div class="col-xs-5 col-lg-6">
                       <tink-timepicker id="selectedTime2" data-ng-model="selectedTime2"></tink-timepicker>
@@ -167,7 +171,7 @@
     <section class="col-xs-12 margin-top" data-ng-controller="tableCtrl">
       <div class="row">
         <div class="col-xs-12">
-          <tink-interactive-table data-tink-checked="boxChecked($data,$checked)" data-tink-loading="ct.loading" data-tink-headers="headers" data-tink-data="data.content" data-tink-actions="actions" data-tink-empty-message="geen data beschikbaar">
+          <tink-interactive-table data-tink-checked="boxChecked($data,$checked)" data-tink-loading="ct.loading" data-tink-headers="headers" data-tink-data="data.content" data-tink-actions="actions" data-tink-empty-message="geen data beschikbaar" data-tink-force-responsive="true">
 
            <table id="aanvragen-overzicht">
               <thead>
