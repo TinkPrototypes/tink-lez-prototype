@@ -40,6 +40,17 @@ $gray-lightest: $body-bg-alt;
     display: inline-block;
     // margin-top: rem(5);
   }
+
+  .select,
+  .datepicker-input-fields {
+    display: inline-block;
+  }
+
+  .datepicker-input-fields {
+    .placeholder {
+      padding-right: rem(15);
+    }
+  }
 }
 
 label {
@@ -77,4 +88,17 @@ label {
 
 .width-auto {
   width: auto !important;
+}
+
+// Temp fix
+.table-interactive-options {
+  text-align: left;
+}
+
+.bar {
+  flex-wrap: wrap;
+
+  &-right {
+    flex-grow: 1;
+  }
 }
