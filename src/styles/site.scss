@@ -36,6 +36,10 @@ $gray-lightest: $body-bg-alt;
     }
   }
 
+  .timepicker {
+    max-width: rem(85);
+  }
+
   .checkbox {
     display: inline-block;
     // margin-top: rem(5);
@@ -47,8 +51,11 @@ $gray-lightest: $body-bg-alt;
   }
 
   .datepicker-input-fields {
-    .placeholder {
-      padding-right: rem(15);
+    // margin-right: rem(15);
+    // padding-right: rem(15);
+
+    .faux-input {
+      margin-right: rem(15);
     }
   }
 }
@@ -72,10 +79,8 @@ label {
 }
 
 .absolute-lg {
-  &-container {
-    > div {
-      z-index: 1;
-    }
+  &-element {
+    pointer-events: none;
   }
 
   &-element {
@@ -88,17 +93,4 @@ label {
 
 .width-auto {
   width: auto !important;
-}
-
-// Temp fix
-.table-interactive-options {
-  text-align: left;
-}
-
-.bar {
-  flex-wrap: wrap;
-
-  &-right {
-    flex-grow: 1;
-  }
 }

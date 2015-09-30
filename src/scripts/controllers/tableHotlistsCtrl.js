@@ -234,18 +234,5 @@ angular.module('tinkApp')
     scope.perpageValue=[10,20,25,30,45];
 
 
-      scope.actions = [
-      {
-          name: 'remove',
-          callback: function(items) {
-            angular.forEach(items, function(val) {
-              scope.data.content.splice(scope.data.content.indexOf(val),1);
-            });
-          },
-          order:0, //orde of the button
-          master:true, //required !
-          icon:'fa-close', //the icon required.
-          single:true // only when one checkbox is selected
-        }
-    ];
+      scope.actions = [];
 }]);
